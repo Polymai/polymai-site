@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examples | Polymai</title>
+    <meta name="description" content="Browse live Polymai example apps with previews, descriptions, and capability signals for portals, dashboards, workflows, and service-aware builds.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="data/supabaseConfig.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav-header>
+      <div class="nav-shell">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="navMenu" aria-label="Primary navigation">
+          <a class="is-active" href="examples.html">Examples</a>
+          <a href="index.html#control-plane">Product</a>
+          <a href="index.html#workflow">Workflow</a>
+          <a href="pricing.html">Packages</a>
+          <button class="theme-options" id="themeOptions" type="button" aria-label="Style theme">
+            <span class="theme-option-icon theme-current-icon theme-option-icon-bright" aria-hidden="true"></span>
+            <span class="theme-current-label">Light</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section examples-page-hero">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Examples</p>
+          <h1>Live apps built with Polymai.</h1>
+          <p>Browse real app surfaces, inspect the full preview, and compare the kinds of flows, data patterns, and service boundaries Polymai can plan around.</p>
+        </div>
+      </section>
+
+      <section class="section gallery-section examples-page-section" id="gallery">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div>
+            <p class="eyebrow">Browse</p>
+            <h2>Find a pattern close to your idea.</h2>
+          </div>
+          <p class="section-note" id="galleryCount">Loading builds...</p>
+        </div>
+
+        <div class="gallery-toolbar" data-reveal>
+          <label class="field field-search" for="gallerySearch">
+            <span>Search builds</span>
+            <input id="gallerySearch" type="search" autocomplete="off" aria-label="Search builds" placeholder="Portal, booking, dashboard">
+          </label>
+          <label class="field field-select" for="galleryTypeFilter">
+            <span>Focus</span>
+            <select id="galleryTypeFilter">
+              <option value="all">All focuses</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="state-line" id="galleryStatus" role="status" aria-live="polite">Loading gallery data...</div>
+        <div class="gallery-grid examples-page-grid" id="galleryGrid" aria-live="polite"></div>
+        <div class="gallery-more-row" data-reveal>
+          <button class="button button-secondary" id="galleryLoadMore" type="button">Show more builds</button>
+        </div>
+        <div class="empty-state" id="galleryEmpty" hidden>
+          <h3>No builds match that search.</h3>
+          <p>Try a broader use case or clear the filter.</p>
+          <button class="button button-secondary" id="clearGalleryFilters" type="button">Clear filters</button>
+        </div>
+        <div class="error-state" id="galleryError" hidden>
+          <h3>Gallery could not load.</h3>
+          <p id="galleryErrorText">Refresh the page or try again later.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="pricing.html">Packages</a>
+          <a href="legal.html">Legal</a>
+          <a href="developers.html">Developers</a>
+        </nav>
+        <p>Plan-first AI app building for software that needs to keep evolving.</p>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="previewModal" hidden>
+      <section class="preview-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close preview">
+          <span aria-hidden="true">x</span>
+        </button>
+        <p class="eyebrow" id="modalIndustry"></p>
+        <h2 id="modalTitle">Build preview</h2>
+        <p id="modalSummary"></p>
+        <dl class="modal-facts">
+          <div>
+            <dt>Focus</dt>
+            <dd id="modalFocus"></dd>
+          </div>
+          <div>
+            <dt>Best for</dt>
+            <dd id="modalAudience"></dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd id="modalStatus"></dd>
+          </div>
+        </dl>
+        <div class="preview-frame-shell" id="modalFrameShell" hidden>
+          <iframe id="modalFrame" title="Build preview" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+        <div class="modal-actions">
+          <a class="button button-primary" id="modalLeadLink" href="index.html#lead">Start similar build</a>
+          <a class="button button-secondary" id="modalOpenLink" href="#" target="_blank" rel="noreferrer">Open example</a>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/galleryData.js"></script>
+    <script src="js/previewModal.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/leadForm.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
