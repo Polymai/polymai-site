@@ -22,20 +22,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: source
 
       - name: Checkout published site
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ env.GALLERY_BRANCH }}
           path: site
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "22"
+          package-manager-cache: false
 
       - name: Build gallery index
         run: node source/.polymai/refresh-gallery-index.mjs
