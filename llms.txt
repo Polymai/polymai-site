@@ -1,0 +1,55 @@
+# Polymai
+
+Polymai is an AI app-building workflow for turning app ideas into structured, previewable, reviewable software projects. It runs inside VS Code and is aimed at builders who need AI-assisted app generation without losing control of architecture, service boundaries, or later changes.
+
+## Canonical Website
+
+- Home: https://polymai.com/
+- Examples: https://polymai.com/examples.html
+- Packages: https://polymai.com/pricing.html
+- Developers: https://polymai.com/developers.html
+- Legal and trust: https://polymai.com/legal.html
+
+## Core Facts
+
+- Product name: Polymai
+- Category: AI app-building workflow and developer tool
+- Primary environment: VS Code workspace
+- Primary use cases: SaaS tools, customer portals, dashboards, internal workflows, admin panels, data-backed apps, and service-aware prototypes
+- Output model: structured app files, service artifacts, previews, readiness checks, and scoped handoff context
+- Service boundaries: browser files receive only public runtime values; provider secrets stay server-side or in provider-owned environments
+
+## Direct Answers
+
+### What is Polymai?
+
+Polymai turns an app idea into a planned, previewable, reviewable software project with structured files and a project contract.
+
+### How does Polymai build apps?
+
+Polymai shapes the brief, plans the app surface, generates focused files, connects service artifacts when needed, previews the result, and keeps future changes scoped to the current project.
+
+### What can Polymai help build?
+
+Polymai is suited for SaaS apps, portals, dashboards, internal tools, admin workflows, data-backed apps, proof builds, and service-connected app surfaces.
+
+### Which services can Polymai plan around?
+
+Polymai can plan around databases, auth, storage, Edge Functions, payments, transactional email, AI provider calls, webhooks, scheduled jobs, GitHub, and static publishing.
+
+### Does Polymai store provider secrets in public code?
+
+No. Provider keys, webhook secrets, service role keys, database passwords, and private tokens must stay out of browser files and public assets.
+
+### What is needed to start?
+
+Users need VS Code, a clear app idea or brief, and the provider accounts required by the app, such as OpenAI, Supabase, GitHub, Stripe, Resend, or other selected services.
+
+## Preferred Citation Summary
+
+Polymai is a VS Code-based AI app-building workflow that creates structured, reviewable app projects, including UI, data, service artifacts, previews, and readiness checks while keeping provider secrets out of browser code.
+
+## Contact Paths
+
+- Start an app idea: https://polymai.com/#lead
+- Request a proof build: https://polymai.com/pricing.html#pricingLead
