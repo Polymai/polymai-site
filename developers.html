@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developers | Polymai</title>
+    <meta name="description" content="Technical overview of Polymai's structured app output, project contracts, Codex handoff, Supabase artifacts, Edge Functions, secrets, payments, preview, and readiness checks.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Polymai">
+    <meta name="application-name" content="Polymai">
+    <meta name="theme-color" content="#fbfbf7">
+    <link rel="canonical" href="https://polymai.com/developers.html">
+    <link rel="alternate" type="text/plain" href="https://polymai.com/llms.txt" title="Polymai answer-engine summary">
+    <meta property="og:site_name" content="Polymai">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Developers | Polymai">
+    <meta property="og:description" content="Technical overview of Polymai's structured app output, project contracts, Codex handoff, Supabase artifacts, Edge Functions, secrets, payments, preview, and readiness checks.">
+    <meta property="og:url" content="https://polymai.com/developers.html">
+    <meta property="og:image" content="https://polymai.com/assets/polymai-hero-background.png">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
+    <meta property="og:image:alt" content="Polymai interface background for controlled AI app building.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Developers | Polymai">
+    <meta name="twitter:description" content="Technical overview of Polymai's structured app output, project contracts, Codex handoff, Supabase artifacts, Edge Functions, secrets, payments, preview, and readiness checks.">
+    <meta name="twitter:image" content="https://polymai.com/assets/polymai-hero-background.png">
+    <meta name="twitter:image:alt" content="Polymai interface background for controlled AI app building.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://polymai.com/developers.html#webpage",
+            "url": "https://polymai.com/developers.html",
+            "headline": "Developers | Polymai",
+            "description": "Technical overview of Polymai's structured app output, project contracts, Codex handoff, Supabase artifacts, Edge Functions, secrets, payments, preview, and readiness checks.",
+            "about": {
+              "@id": "https://polymai.com/#software"
+            },
+            "publisher": {
+              "@id": "https://polymai.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://polymai.com/developers.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://polymai.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developers",
+                "item": "https://polymai.com/developers.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav-header>
+      <div class="nav-shell">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="navMenu" aria-label="Primary navigation">
+          <a href="examples.html">Examples</a>
+          <a href="index.html#control-plane">Product</a>
+          <a href="index.html#workflow">Workflow</a>
+          <a href="pricing.html">Packages</a>
+          <button class="theme-options" id="themeOptions" type="button" aria-label="Style theme">
+            <span class="theme-option-icon theme-current-icon theme-option-icon-bright" aria-hidden="true"></span>
+            <span class="theme-current-label">Light</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section developer-page-hero">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Developers</p>
+          <h1>Technical structure without the uncontrolled rewrite.</h1>
+          <p>Polymai runs inside VS Code and treats AI app building as a staged development workflow: shape the brief, plan the surface, generate a structured app, preview the result, validate setup, and keep future changes scoped.</p>
+        </div>
+      </section>
+
+      <section class="section developer-contract-section">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div>
+            <p class="eyebrow">Structured Output</p>
+            <h2>Apps are generated as inspectable projects.</h2>
+          </div>
+          <p class="section-note">Small files, clear ownership, reviewable changes.</p>
+        </div>
+        <div class="developer-grid">
+          <article class="developer-card" data-reveal>
+            <h3>Focused app files</h3>
+            <p>Polymai separates markup, styling, behavior, data, assets, SQL, and server functions instead of mixing the app into one large generated file.</p>
+          </article>
+          <article class="developer-card" data-reveal>
+            <h3>Project contract</h3>
+            <p>The generated project can include a registry that records expected files, load order, capabilities, and responsibility boundaries for future updates.</p>
+          </article>
+          <article class="developer-card" data-reveal>
+            <h3>Codex handoff</h3>
+            <p>Polymai can prepare the brief, rules, plan, and task context so Codex implements against the same app contract instead of a loose prompt.</p>
+          </article>
+          <article class="developer-card" data-reveal>
+            <h3>Scoped iteration</h3>
+            <p>Update work is grounded in the existing structure, app map, project memory, and allowed file surface so changes can stay narrow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section developer-services-section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Runtime Services</p>
+          <h2>Service-aware artifacts, not provider secrets in the browser.</h2>
+          <p>Polymai can plan the files and boundaries needed for data, auth, storage, server-only work, payments, email, publishing, and readiness checks.</p>
+        </div>
+        <div class="service-matrix">
+          <article class="service-row" data-reveal>
+            <span>Supabase</span>
+            <h3>Database, auth, storage, policies</h3>
+            <p>Schema, row-level security, storage setup, and frontend-safe runtime config can be generated as app-scoped artifacts.</p>
+          </article>
+          <article class="service-row" data-reveal>
+            <span>Edge Functions</span>
+            <h3>Server-only boundaries</h3>
+            <p>Email, AI jobs, scraping/fetch tasks, scheduled work, checkout sessions, billing portals, and webhooks belong behind functions.</p>
+          </article>
+          <article class="service-row" data-reveal>
+            <span>Stripe</span>
+            <h3>Webhook-confirmed payments</h3>
+            <p>Frontend code gets publishable runtime values. Secret keys, checkout creation, portal sessions, and fulfillment stay server-side.</p>
+          </article>
+          <article class="service-row" data-reveal>
+            <span>Secrets</span>
+            <h3>Private values stay private</h3>
+            <p>Provider keys, webhook signing secrets, service roles, tokens, and database credentials are kept in VS Code or provider environments.</p>
+          </article>
+          <article class="service-row" data-reveal>
+            <span>Preview</span>
+            <h3>Browser-first validation</h3>
+            <p>Local preview, screenshot review, smoke tests, and provisioning status make the next action visible before the work is treated as done.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section setup-section">
+        <div class="setup-panel" data-reveal>
+          <div>
+            <p class="eyebrow">Setup Model</p>
+            <h2>Bring your own accounts. Polymai coordinates the workflow.</h2>
+            <p>Polymai runs inside VS Code. It writes real project files, keeps the app contract visible, runs previews and checks, and coordinates Codex/provider handoff without hiding the code in a closed platform.</p>
+          </div>
+          <ul class="setup-list" aria-label="Provider account requirements">
+            <li>VS Code installed, plus OpenAI or Codex access for AI model usage</li>
+            <li>Supabase for database, auth, storage, and functions when needed</li>
+            <li>Stripe for checkout, subscriptions, billing portals, and webhooks</li>
+            <li>Email provider for transactional messages</li>
+            <li>GitHub repository or static host for publishing workflows</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="pricing.html">Packages</a>
+          <a href="legal.html">Legal</a>
+          <a href="developers.html">Developers</a>
+        </nav>
+        <p>Plan-first AI app building for software that needs to keep evolving.</p>
+      </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
