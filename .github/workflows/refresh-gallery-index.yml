@@ -1,0 +1,60 @@
+name: Refresh gallery index
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: polymai-gallery-index-refresh
+  cancel-in-progress: true
+
+env:
+  GALLERY_BRANCH: gh-pages
+  GITHUB_OWNER: Polymai
+  GITHUB_REPO_LIMIT: "1000"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          path: source
+
+      - name: Checkout published site
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.GALLERY_BRANCH }}
+          path: site
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build gallery index
+        run: node source/.polymai/refresh-gallery-index.mjs
+        env:
+          POLYMAI_GALLERY_OUTPUT: ${{ github.workspace }}/site/data/polymai-apps-index.json
+          GITHUB_OWNER: ${{ env.GITHUB_OWNER }}
+          GITHUB_REPO_LIMIT: ${{ env.GITHUB_REPO_LIMIT }}
+          GITHUB_TOKEN: ${{ secrets.POLYMAI_GALLERY_GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Commit updated index
+        working-directory: site
+        run: |
+          if git diff --quiet -- data/polymai-apps-index.json; then
+            echo "Gallery index unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/polymai-apps-index.json
+          git commit -m "Refresh Polymai gallery index"
+          git push origin HEAD:${GALLERY_BRANCH}
