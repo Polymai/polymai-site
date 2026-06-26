@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <g fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 24H64H104M24 64H64H104M24 104H64H104"/>
+    <path d="M24 24V64V104M64 24V64V104M104 24V64V104"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="24" cy="24" r="12"/>
+    <circle cx="64" cy="24" r="12"/>
+    <circle cx="104" cy="24" r="12"/>
+    <circle cx="24" cy="64" r="12"/>
+    <circle cx="64" cy="64" r="12"/>
+    <circle cx="104" cy="64" r="12"/>
+    <circle cx="24" cy="104" r="12"/>
+    <circle cx="64" cy="104" r="12"/>
+    <circle cx="104" cy="104" r="12"/>
+  </g>
+</svg>
