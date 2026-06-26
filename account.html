@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account | Polymai</title>
+    <meta name="description" content="Polymai account dashboard for subscription status, app quota, receipts, and generated app stats.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Polymai">
+    <meta name="application-name" content="Polymai">
+    <meta name="theme-color" content="#fbfbf7">
+    <link rel="canonical" href="https://polymai.com/account.html">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="data/supabaseConfig.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav-header>
+      <div class="nav-shell">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="navMenu" aria-label="Primary navigation">
+          <a href="examples.html">Examples</a>
+          <a href="index.html#control-plane">Product</a>
+          <a href="index.html#workflow">Workflow</a>
+          <a href="pricing.html">Packages</a>
+          <a class="is-active" href="account.html">Account</a>
+          <button class="theme-options" id="themeOptions" type="button" aria-label="Style theme">
+            <span class="theme-option-icon theme-current-icon theme-option-icon-bright" aria-hidden="true"></span>
+            <span class="theme-current-label">Light</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section account-hero">
+        <div class="account-hero-panel" data-reveal>
+          <div>
+            <p class="eyebrow">Account</p>
+            <h1>Your Polymai workspace.</h1>
+            <p>Track plan access, app quota, generated apps, Stripe receipts, and billing actions from one place.</p>
+          </div>
+          <div class="account-identity">
+            <span id="workspaceName">Loading workspace...</span>
+            <strong id="accountEmail">-</strong>
+            <button class="button button-secondary" id="signOutButton" type="button">Sign out</button>
+          </div>
+        </div>
+        <p class="account-status form-status" id="accountStatus" role="status" aria-live="polite">Loading account...</p>
+      </section>
+
+      <section class="section account-grid-section">
+        <div class="account-grid">
+          <article class="account-panel account-plan-panel" data-reveal>
+            <div class="account-panel-head">
+              <div>
+                <p class="eyebrow">Current plan</p>
+                <h2 id="planName">Free</h2>
+              </div>
+              <span class="account-pill" id="subscriptionStatus">free</span>
+            </div>
+            <div class="quota-meter" aria-label="App quota">
+              <div class="quota-meter-bar"><span id="quotaProgress"></span></div>
+              <p><strong id="quotaUsed">0</strong> of <strong id="quotaLimit">2</strong> app builds used. <strong id="quotaRemaining">2</strong> remaining.</p>
+              <p>Period renews <span id="periodEnd">-</span>.</p>
+            </div>
+            <div class="account-actions">
+              <button class="button button-primary" type="button" data-checkout-plan="pro">Upgrade to Pro</button>
+              <button class="button button-secondary" type="button" data-checkout-plan="studio">Choose Studio</button>
+              <button class="button button-secondary" type="button" id="billingPortalButton">Manage billing</button>
+            </div>
+          </article>
+
+          <article class="account-panel account-stats-panel" data-reveal>
+            <p class="eyebrow">Stats</p>
+            <div class="account-stat-grid">
+              <div>
+                <span>Total apps</span>
+                <strong id="totalApps">0</strong>
+              </div>
+              <div>
+                <span>Workspace members</span>
+                <strong id="memberCount">1</strong>
+              </div>
+              <div>
+                <span>Provider model</span>
+                <strong>BYOK</strong>
+              </div>
+            </div>
+            <p class="account-muted">Stats update when the VS Code extension records created apps against this account.</p>
+            <button class="button button-secondary" type="button" id="refreshAccountButton">Refresh account</button>
+          </article>
+
+          <article class="account-panel account-wide-panel" data-reveal>
+            <div class="account-panel-head">
+              <div>
+                <p class="eyebrow">VS Code plugin</p>
+                <h2>Activation tokens</h2>
+              </div>
+              <button class="button button-secondary" type="button" id="refreshPluginTokensButton">Refresh tokens</button>
+            </div>
+            <p class="account-muted">Create a token here, paste it into the Polymai VS Code plugin, then keep or revoke it from this account. Each token binds to one plugin installation on first use.</p>
+            <div class="account-token-form">
+              <label class="field" for="pluginTokenName">
+                <span>Token name</span>
+                <input id="pluginTokenName" type="text" maxlength="80" value="VS Code plugin">
+              </label>
+              <button class="button button-primary" type="button" id="createPluginTokenButton">Create activation token</button>
+            </div>
+            <div class="account-token-created" id="createdPluginTokenPanel" hidden>
+              <div>
+                <strong>Copy this token now.</strong>
+                <span>It is only shown once.</span>
+              </div>
+              <div class="account-token-copy-row">
+                <input id="createdPluginToken" type="text" readonly>
+                <button class="button button-secondary" type="button" id="copyPluginTokenButton">Copy</button>
+              </div>
+            </div>
+            <div class="account-list" id="pluginTokensList">
+              <div class="account-empty">Loading plugin tokens...</div>
+            </div>
+          </article>
+
+          <article class="account-panel account-wide-panel" data-reveal>
+            <div class="account-panel-head">
+              <div>
+                <p class="eyebrow">Generated apps</p>
+                <h2>Recent builds</h2>
+              </div>
+            </div>
+            <div class="account-list" id="appsList">
+              <div class="account-empty">Loading apps...</div>
+            </div>
+          </article>
+
+          <article class="account-panel account-wide-panel" data-reveal>
+            <div class="account-panel-head">
+              <div>
+                <p class="eyebrow">Billing</p>
+                <h2>Receipts and invoices</h2>
+              </div>
+              <button class="button button-secondary" type="button" id="refreshInvoicesButton">Refresh receipts</button>
+            </div>
+            <div class="account-list" id="invoiceList">
+              <div class="account-empty">Loading receipts...</div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="account-loading-overlay" id="accountLoadingOverlay" hidden aria-hidden="true">
+      <div class="account-loading-card" role="status" aria-live="polite" aria-atomic="true">
+        <span class="account-loading-spinner" aria-hidden="true"></span>
+        <strong id="accountLoadingTitle">Loading account</strong>
+        <p id="accountLoadingDetail">Syncing your workspace, subscription, receipts, and app stats.</p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="pricing.html">Packages</a>
+          <a href="account.html">Account</a>
+          <a href="legal.html">Legal</a>
+          <a href="developers.html">Developers</a>
+        </nav>
+        <p>Plan-first AI app building for software that needs to keep evolving.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

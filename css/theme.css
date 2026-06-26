@@ -1,0 +1,215 @@
+:root {
+  color-scheme: light;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ink: #111412;
+  --ink-soft: #404943;
+  --muted: #68736d;
+  --paper: #fbfbf7;
+  --surface: #ffffff;
+  --surface-strong: #f0f5ef;
+  --line: #dfe6dc;
+  --line-strong: #c7d1c7;
+  --accent: #0f8f68;
+  --accent-strong: #09684e;
+  --accent-soft: #e5f4ee;
+  --coral: #d95742;
+  --citrus: #e3b331;
+  --shadow: 0 18px 50px rgba(17, 20, 18, 0.1);
+  --radius: 8px;
+  --container: min(1120px, calc(100vw - 40px));
+  --header-height: 72px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #f7f8f2;
+  --ink-soft: #d1d7cf;
+  --muted: #a4ada4;
+  --paper: #0d100f;
+  --surface: #151918;
+  --surface-strong: #1e2522;
+  --line: #303934;
+  --line-strong: #48534d;
+  --accent: #30c291;
+  --accent-strong: #74e4b6;
+  --accent-soft: #153329;
+  --coral: #ff8b77;
+  --citrus: #f0cc62;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+}
+
+:root[data-theme="crazy"] {
+  color-scheme: dark;
+  --ink: #fff9ff;
+  --ink-soft: #ffd0ff;
+  --muted: #97faff;
+  --paper: #08000f;
+  --surface: #180025;
+  --surface-strong: #31004d;
+  --line: rgba(255, 44, 214, 0.44);
+  --line-strong: rgba(17, 255, 238, 0.7);
+  --accent: #0dfff2;
+  --accent-strong: #f7ff00;
+  --accent-soft: #3a005e;
+  --coral: #ff145f;
+  --citrus: #ff9d00;
+  --shadow: 0 0 36px rgba(255, 0, 208, 0.28), 0 0 68px rgba(0, 255, 239, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+:root[data-theme="crazy"] body {
+  background:
+    radial-gradient(circle at 10% 5%, rgba(255, 0, 174, 0.34), transparent 26rem),
+    radial-gradient(circle at 88% 10%, rgba(0, 255, 238, 0.28), transparent 24rem),
+    radial-gradient(circle at 44% 52%, rgba(247, 255, 0, 0.14), transparent 30rem),
+    linear-gradient(135deg, #08000f 0%, #190026 44%, #001625 100%);
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0d100f;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(15, 143, 104, 0.35);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  transform: translateY(-140%);
+  border-radius: 4px;
+  background: var(--ink);
+  color: #ffffff;
+  padding: 10px 14px;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  max-width: 12ch;
+  font-size: clamp(2.35rem, 5.2vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 16px;
+  max-width: 14ch;
+  font-size: clamp(1.52rem, 2.65vw, 2.7rem);
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.02rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+p {
+  color: var(--ink-soft);
+}
+
+[data-reveal] {
+  opacity: 0.86;
+  transform: translateY(18px);
+  transition: opacity 640ms ease, transform 640ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
