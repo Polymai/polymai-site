@@ -1,8 +1,27 @@
 {
-  "generatedAt": "2026-06-26T22:38:31.462Z",
+  "generatedAt": "2026-06-27T14:56:35.730Z",
   "source": "github:Polymai",
-  "count": 36,
+  "count": 37,
   "apps": [
+    {
+      "id": "new-site",
+      "title": "New Site",
+      "focus": "GitHub build",
+      "audience": "Polymai customers",
+      "industry": "Custom software",
+      "summary": "New Site is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
+      "description": "New Site is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
+      "status": "Live app",
+      "impact": "Open live app",
+      "url": "https://polymai.github.io/new-site/",
+      "previewUrl": "https://polymai.github.io/new-site/",
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
+      "publishedAt": "2026-06-27T14:42:57Z",
+      "updatedAt": "2026-06-27T14:42:57Z",
+      "repo": "Polymai/new-site",
+      "manifest": ""
+    },
     {
       "id": "polymai-com",
       "title": "Polymai Com",
