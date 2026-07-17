@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developers | Polymai</title>
+    <meta name="description" content="See Polymai's coder-agnostic build sequence, full provider requirements, ongoing provisioning loop, project files, previews, checks, and publishing workflow.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Polymai">
+    <meta name="application-name" content="Polymai">
+    <meta name="theme-color" content="#fbfbf7">
+    <link rel="canonical" href="https://polymai.com/developers.html">
+    <link rel="alternate" type="text/plain" href="https://polymai.com/llms.txt" title="Polymai answer-engine summary">
+    <meta property="og:site_name" content="Polymai">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Developers | Polymai">
+    <meta property="og:description" content="See Polymai's coder-agnostic build sequence, full provider requirements, ongoing provisioning loop, project files, previews, checks, and publishing workflow.">
+    <meta property="og:url" content="https://polymai.com/developers.html">
+    <meta property="og:image" content="https://polymai.com/assets/polymai-hero-background.png">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
+    <meta property="og:image:alt" content="Polymai interface background for controlled AI app building.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Developers | Polymai">
+    <meta name="twitter:description" content="See Polymai's coder-agnostic build sequence, full provider requirements, ongoing provisioning loop, project files, previews, checks, and publishing workflow.">
+    <meta name="twitter:image" content="https://polymai.com/assets/polymai-hero-background.png">
+    <meta name="twitter:image:alt" content="Polymai interface background for controlled AI app building.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://polymai.com/developers.html#webpage",
+            "url": "https://polymai.com/developers.html",
+            "headline": "Developers | Polymai",
+            "description": "See Polymai's coder-agnostic build sequence, full provider requirements, ongoing provisioning loop, project files, previews, checks, and publishing workflow.",
+            "about": {
+              "@id": "https://polymai.com/#software"
+            },
+            "publisher": {
+              "@id": "https://polymai.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://polymai.com/developers.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://polymai.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developers",
+                "item": "https://polymai.com/developers.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav-header>
+      <div class="nav-shell">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="navMenu" aria-label="Primary navigation">
+          <a href="index.html#workflow">How it works</a>
+          <a href="examples.html">Examples</a>
+          <a href="index.html#control-plane">What you get</a>
+          <a href="pricing.html">Packages</a>
+          <a href="account.html">Account</a>
+          <button class="theme-options" id="themeOptions" type="button" aria-label="Style theme">
+            <span class="theme-option-icon theme-current-icon theme-option-icon-bright" aria-hidden="true"></span>
+            <span class="theme-current-label">Light</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section developer-page-hero">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Developers</p>
+          <h1>Polymai is the control layer around AI app building.</h1>
+          <p>Polymai prepares the task. Your coder implements it. Polymai provisions and verifies the result.</p>
+        </div>
+        <div class="developer-hero-actions" data-reveal>
+          <a class="button button-primary" href="https://marketplace.visualstudio.com/items?itemName=Polymai.polymai" target="_blank" rel="noreferrer" aria-label="Get the Polymai VS Code extension (opens in a new tab)">Get the VS Code extension <span aria-hidden="true">&nearr;</span></a>
+        </div>
+        <div class="developer-role-grid info-card-grid" data-info-card-group aria-label="Responsibilities in a Polymai build" data-reveal>
+          <article class="developer-role-card info-card" data-info-card>
+            <span>01</span>
+            <p class="eyebrow">Polymai</p>
+            <h2>Plans, provisions, verifies</h2>
+            <p class="info-card-summary">Owns the control loop around the code.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Polymai keeps the brief, scope, project rules, provider setup, preview, checks, publishing, and project memory connected.</p>
+              </div>
+            </div>
+          </article>
+          <article class="developer-role-card info-card" data-info-card>
+            <span>02</span>
+            <p class="eyebrow">Your coding agent</p>
+            <h2>Runs after Polymai</h2>
+            <p class="info-card-summary">Implements the prepared task.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Run Codex, Claude Code, or another compatible coding agent inside the prepared workspace.</p>
+              </div>
+            </div>
+          </article>
+          <article class="developer-role-card info-card" data-info-card>
+            <span>03</span>
+            <p class="eyebrow">Your providers</p>
+            <h2>Run app services</h2>
+            <p class="info-card-summary">Supply only the runtime the app needs.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Your accounts supply data, sign-in, storage, payments, email, AI, and hosting when required.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section developer-requirements-section" id="full-build-requirements">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Full build checklist</p>
+          <h2>Know what needs to be connected.</h2>
+          <p>Three core connections start every build. Add providers only when the app needs them.</p>
+        </div>
+        <div class="developer-requirements-table-shell" data-reveal>
+          <table class="developer-requirements-table">
+            <caption class="visually-hidden">Accounts, tools, and provider access used during a complete Polymai app build.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Build area</th>
+                <th scope="col">What you need</th>
+                <th scope="col">When it is needed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Polymai account</th>
+                <td data-label="What you need">A Polymai activation token from your account page.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level requirement-level--core">Core</span> Activates the extension and checks your app quota.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Planning AI</th>
+                <td data-label="What you need">An OpenAI or Anthropic API key, or a configured local model.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level requirement-level--core">Core</span> Used by Polymai to shape the brief, plan the project, and prepare the coding task.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Coding agent</th>
+                <td data-label="What you need">Codex, Claude Code, or another compatible coding agent installed and signed in.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level requirement-level--core">Core</span> Run after Polymai has prepared the task files. The agent login is separate from Polymai API keys.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Supabase</th>
+                <td data-label="What you need">Project URL and publishable key; provisioning also needs secure project, database, and Management API access.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level">When used</span> For database, sign-in, storage, Edge Functions, or automated backend provisioning.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Stripe</th>
+                <td data-label="What you need">Publishable and secret keys, webhook signing secret, plus Price IDs or server-owned price configuration.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level">When used</span> For checkout, subscriptions, billing portals, invoices, or payment verification.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Email</th>
+                <td data-label="What you need">A Resend API key and a verified sender or domain.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level">When used</span> For transactional email such as sign-in links, receipts, notifications, or alerts.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Generated app AI</th>
+                <td data-label="What you need">A separate OpenAI or Anthropic provider key for server-side AI features in the generated app.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level">When used</span> Only when the app itself runs analysis, summaries, assistants, or other AI jobs.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">GitHub</th>
+                <td data-label="What you need">A personal access token with access to the target repository or organization.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level">When used</span> When Polymai creates repositories, publishes the app, or configures GitHub Pages workflows.</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Calendar or Meet</th>
+                <td data-label="What you need">Google Cloud OAuth client credentials.</td>
+                <td data-label="When it is needed"><span class="requirement-detail"><span class="requirement-level">When used</span> Only for apps that connect Google Calendar or Google Meet.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="developer-requirements-note" data-reveal>Readiness shows connected, missing, and unused services. Secrets never belong in public files.</p>
+      </section>
+
+      <section class="section developer-contract-section">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div>
+            <p class="eyebrow">What Polymai produces</p>
+            <h2>An inspectable project, not a hidden generation.</h2>
+          </div>
+          <p class="section-note">Small files, clear ownership, reviewable changes.</p>
+        </div>
+        <div class="developer-grid info-card-grid" data-info-card-group>
+          <article class="developer-card info-card" data-info-card data-reveal>
+            <h3>Focused app files</h3>
+            <p class="info-card-summary">Small files with clear ownership.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Markup, styling, behavior, data, assets, SQL, and server functions stay separate instead of becoming one generated file.</p>
+              </div>
+            </div>
+          </article>
+          <article class="developer-card info-card" data-info-card data-reveal>
+            <h3>Build contract</h3>
+            <p class="info-card-summary">One map for every later change.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>The project records files, load order, capabilities, and responsibility boundaries.</p>
+              </div>
+            </div>
+          </article>
+          <article class="developer-card info-card" data-info-card data-reveal>
+            <h3>Coder-agnostic execution</h3>
+            <p class="info-card-summary">Use the coder that fits the task.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Codex and Claude Code have launch shortcuts; another compatible agent can use the same prepared files.</p>
+              </div>
+            </div>
+          </article>
+          <article class="developer-card info-card" data-info-card data-reveal>
+            <h3>Scoped iteration</h3>
+            <p class="info-card-summary">Change the app without losing context.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Updates reuse the existing structure, app map, project memory, and allowed file surface.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section developer-services-section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Ongoing provisioning</p>
+          <h2>Service setup follows every build and update.</h2>
+          <p>After coding: detect, apply, and verify.</p>
+        </div>
+        <div class="service-matrix info-card-grid" data-info-card-group>
+          <article class="service-row info-card" data-info-card data-reveal>
+            <span>01 · Detect</span>
+            <h3>Read the current artifacts</h3>
+            <p class="info-card-summary">Find what changed after the coder run.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Scan schema, policies, storage, Edge Functions, secrets, auth, payments, and publishing artifacts.</p>
+              </div>
+            </div>
+          </article>
+          <article class="service-row info-card" data-info-card data-reveal>
+            <span>02 · Supabase</span>
+            <h3>Apply the backend runtime</h3>
+            <p class="info-card-summary">Provision the detected backend changes.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Apply database changes, access policies, storage, Edge Functions, secrets, and supported auth configuration.</p>
+              </div>
+            </div>
+          </article>
+          <article class="service-row info-card" data-info-card data-reveal>
+            <span>03 · Payments</span>
+            <h3>Keep money changes explicit</h3>
+            <p class="info-card-summary">Automate tests, confirm live changes.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Test payment setup can be automated. Live webhooks, secrets, and production actions remain explicit.</p>
+              </div>
+            </div>
+          </article>
+          <article class="service-row info-card" data-info-card data-reveal>
+            <span>04 · Publish</span>
+            <h3>Connect repository automation</h3>
+            <p class="info-card-summary">Publish when the project is ready.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Provision the repository and publishing workflow when the artifacts and required access are present.</p>
+              </div>
+            </div>
+          </article>
+          <article class="service-row info-card" data-info-card data-reveal>
+            <span>05 · Verify</span>
+            <h3>Close the loop</h3>
+            <p class="info-card-summary">Turn blockers into the next focused task.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Refresh readiness after provisioning. Missing setup stays visible and code blockers return to your coder.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="developer-requirements-note" data-reveal><strong>Run mode:</strong> one-click by default, automatic in test mode, manual for live payments.</p>
+      </section>
+
+      <section class="section setup-section">
+        <div class="setup-panel" data-reveal>
+          <div>
+            <p class="eyebrow">Setup Model</p>
+            <h2>You keep the code and choose the services.</h2>
+            <p>Real files in VS Code. Your providers. Your code.</p>
+          </div>
+          <ul class="setup-list" aria-label="Provider account requirements">
+            <li>Any compatible coding agent after Polymai prepares the task</li>
+            <li>Data, auth, storage, and server functions when needed</li>
+            <li>Payments, email, and publishing only when used</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="wordmark" href="index.html#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="pricing.html">Packages</a>
+          <a href="account.html">Account</a>
+          <a href="legal.html">Legal</a>
+          <a href="developers.html">Developers</a>
+        </nav>
+        <p>Plan. Build with any coder. Provision and improve.</p>
+      </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/infoCards.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
