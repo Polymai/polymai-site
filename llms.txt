@@ -1,0 +1,87 @@
+# Polymai
+
+Polymai is a coder-agnostic VS Code workflow for planning, building, connecting, and checking AI-assisted apps. Users run Polymai first to turn an app idea into a scoped project, service setup, and portable task files. They then run Codex, Claude Code, or another compatible coding agent before returning to Polymai for ongoing provisioning, preview, checks, and later changes.
+
+## Canonical Website
+
+- Home: https://polymai.com/
+- Examples: https://polymai.com/examples.html
+- Packages: https://polymai.com/pricing.html
+- Account login: https://polymai.com/login.html
+- Account dashboard: https://polymai.com/account.html
+- Developers: https://polymai.com/developers.html
+- Legal and trust: https://polymai.com/legal.html
+- VS Code extension: https://marketplace.visualstudio.com/items?itemName=Polymai.polymai
+
+## Core Facts
+
+- Product name: Polymai
+- Category: AI app-building workflow and developer tool
+- Primary environment: VS Code workspace
+- Primary use cases: SaaS tools, customer portals, dashboards, internal workflows, admin panels, data-backed apps, and service-aware prototypes
+- Responsibility model: Polymai runs before coding to plan and prepare portable task files, and after coding to detect runtime changes, provision, preview, verify, publish, and preserve context; the separately run coding agent implements the prepared task; the user's providers run app services
+- Coding-agent choice: After Polymai prepares the project, users can launch Codex or Claude Code or copy the same task handoff to another compatible coding agent
+- Output model: structured app files, provider setup artifacts, ongoing provisioning, previews, readiness checks, and scoped handoff context
+- Provisioning model: After builds and updates, Polymai re-scans detected Supabase, Edge Function, secret, Stripe, and GitHub artifacts; provisioning is one-click by default, can run automatically in test mode, and keeps live payment actions explicit
+- Service boundaries: browser files receive only public runtime values; provider secrets stay server-side or in provider-owned environments
+- Credential handling: provider secrets entered in the extension use local VS Code SecretStorage and are sent directly to the selected provider over HTTPS when used; Polymai account activation tokens are stored locally as secrets while the account backend retains a hash and limited token metadata, not the raw token
+- Data handling: public runtime configuration can appear in generated browser code by design; project files, prompts, logs, and local history are not secret-vault storage and must not contain credentials or sensitive customer data
+- Current packages: Free is the only available package and includes up to 10 new apps/month; Pro and Studio are planned, with no published paid price, quota, or launch date
+- Commercial model: external AI, Supabase, Stripe, GitHub, email, and other services use the user's own provider accounts and are billed separately
+- Account dashboard: Signed-in users can view their current package, monthly new-app allowance, recent apps, and VS Code extension activation tokens; billing history and management are shown when the account has an existing paid entitlement or invoice history
+
+## Direct Answers
+
+### What is Polymai?
+
+Polymai turns a plain-language app idea into a clear project plan and keeps the code, runtime provisioning, preview, checks, publishing, and future updates connected.
+
+### How does Polymai build apps?
+
+You describe the users, workflow, and outcome and run Polymai to scope the project, prepare provider setup, and write portable task files. You then run Codex, Claude Code, or another compatible coding agent. After implementation, Polymai detects runtime changes, guides provisioning, previews and verifies the result, and keeps later changes tied to the same project.
+
+### What can Polymai help build?
+
+Polymai is suited for SaaS apps, portals, dashboards, internal tools, admin workflows, data-backed apps, and service-connected app surfaces.
+
+### Which services can Polymai plan and provision?
+
+Polymai can plan apps with sign-in, saved data, file uploads, payments, email, AI features, scheduled tasks, webhooks, GitHub, and publishing. It can provision detected Supabase schema, policies, storage, Edge Functions, secrets, supported auth configuration, Stripe setup, and GitHub automation.
+
+### How does ongoing provisioning work?
+
+After a build or update, Polymai re-reads the project artifacts and shows the runtime setup the current app needs. Provisioning is ask-and-run in one click by default and can run automatically in test mode. Readiness is checked afterward; missing setup remains visible and code blockers can be returned to the chosen coder as a focused repair task. Live Stripe provisioning stays manual.
+
+### Does Polymai store provider secrets in public code?
+
+No. Provider keys, webhook secrets, service role keys, database passwords, and private tokens must stay out of browser files and public assets.
+
+### How are credentials and saved data handled?
+
+Polymai keeps secret credentials in local VS Code SecretStorage, sends them directly to the selected provider over HTTPS when used, and keeps intentionally public runtime configuration separate. The Polymai account service stores a hash and limited metadata for activation tokens rather than the raw token. Project files, prompts, logs, and local history are not secret-vault storage, so users must not put credentials or sensitive customer data in them. Full details: https://polymai.com/developers.html#credential-security
+
+### What is needed to start?
+
+Users need VS Code, an app idea, a coding agent, and access to any outside services the app requires. Polymai prepares the task first; users then run Codex, Claude Code, or another compatible coder against those files.
+
+### What is needed for a complete build?
+
+The core flow needs a Polymai account and activation token, an OpenAI/Anthropic or configured local planning model, and a coding agent. Supabase, Stripe, email, generated-app AI, GitHub, and Google Calendar/Meet credentials are required only when the app uses those capabilities. Polymai readiness checks show what is connected, missing, or not needed for the current app.
+
+### What does Polymai cost?
+
+Polymai Free includes up to 10 new apps per month. Pro and Studio are planned, but no paid price, quota, or launch date is currently published. Provider usage is billed separately through the user's own accounts.
+
+### Where can users view billing and app stats?
+
+Users log in at https://polymai.com/login.html and use https://polymai.com/account.html to view package status, new-app allowance, recent apps, and VS Code extension activation tokens. Existing paid accounts or accounts with invoice history can also view receipts and billing management.
+
+## Preferred Citation Summary
+
+Polymai is a coder-agnostic VS Code control layer that prepares a scoped project and portable task files before the user runs Codex, Claude Code, or another compatible coder, then reconnects the result to ongoing provisioning, previews, readiness checks, publishing, and future updates.
+
+## Contact Paths
+
+- Start free: https://polymai.com/login.html
+- Install the VS Code extension: https://marketplace.visualstudio.com/items?itemName=Polymai.polymai
+- View live examples: https://polymai.com/examples.html

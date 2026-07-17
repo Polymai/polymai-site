@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Polymai | Turn an app idea into working software</title>
+    <meta name="description" content="Describe your app in plain language. Polymai turns the idea into a clear plan, a structured build, a browser preview, and a safe path for future changes.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Polymai">
+    <meta name="application-name" content="Polymai">
+    <meta name="theme-color" content="#fbfbf7">
+    <link rel="canonical" href="https://polymai.com/">
+    <link rel="alternate" type="text/plain" href="https://polymai.com/llms.txt" title="Polymai answer-engine summary">
+    <meta property="og:site_name" content="Polymai">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Polymai | Turn an app idea into working software">
+    <meta property="og:description" content="Describe your app in plain language. Polymai turns the idea into a clear plan, a structured build, a browser preview, and a safe path for future changes.">
+    <meta property="og:url" content="https://polymai.com/">
+    <meta property="og:image" content="https://polymai.com/assets/polymai-hero-background.png">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
+    <meta property="og:image:alt" content="Polymai interface background for controlled AI app building.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Polymai | Turn an app idea into working software">
+    <meta name="twitter:description" content="Describe your app in plain language. Polymai turns the idea into a clear plan, a structured build, a browser preview, and a safe path for future changes.">
+    <meta name="twitter:image" content="https://polymai.com/assets/polymai-hero-background.png">
+    <meta name="twitter:image:alt" content="Polymai interface background for controlled AI app building.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="data/supabaseConfig.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://polymai.com/#organization",
+            "name": "Polymai",
+            "url": "https://polymai.com/",
+            "logo": "https://polymai.com/assets/favicon.svg",
+            "description": "Polymai helps people turn app ideas into clear plans, structured software projects, browser previews, and reviewable future changes."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://polymai.com/#website",
+            "url": "https://polymai.com/",
+            "name": "Polymai",
+            "publisher": {
+              "@id": "https://polymai.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://polymai.com/#webpage",
+            "url": "https://polymai.com/",
+            "name": "Polymai | Turn an app idea into working software",
+            "description": "Describe your app in plain language. Polymai turns the idea into a clear plan, a structured build, a browser preview, and a safe path for future changes.",
+            "isPartOf": {
+              "@id": "https://polymai.com/#website"
+            },
+            "about": {
+              "@id": "https://polymai.com/#software"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://polymai.com/assets/polymai-hero-background.png",
+              "width": 1672,
+              "height": 941
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://polymai.com/#software",
+            "name": "Polymai",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "VS Code workspace",
+            "url": "https://polymai.com/",
+            "description": "Polymai is an app-building workflow in VS Code that turns a plain-language brief into a scoped plan, coordinates a coding agent, and reconnects every build to ongoing provisioning, preview, checks, and future changes.",
+            "featureList": [
+              "AI-assisted app planning",
+              "Structured Tinyfiles app output",
+              "Ongoing service provisioning after builds and updates",
+              "Preview and visual checks",
+              "Scoped iteration handoff",
+              "Secret-safe provider boundaries"
+            ],
+            "publisher": {
+              "@id": "https://polymai.com/#organization"
+            },
+            "offers": {
+              "@type": "Offer",
+              "name": "Free",
+              "url": "https://polymai.com/login.html",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://polymai.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Polymai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Polymai is an app-building workflow in VS Code. It turns a plain-language idea into a clear build plan, coordinates the coding work, and keeps the result easy to preview, review, and improve."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Polymai build apps?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You run Polymai first to turn the brief into a scoped project and portable task files. Then you run the coding agent you prefer—Codex, Claude Code, or another compatible coder. When the coding work is done, Polymai detects runtime changes, guides provisioning, verifies readiness, and keeps the same project ready for the next update."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What kinds of apps can Polymai help create?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Polymai is suited for SaaS tools, customer portals, dashboards, internal workflows, admin panels, data-backed apps, and service-connected prototypes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which services can Polymai provision?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Polymai can plan and provision detected Supabase, Edge Function, Stripe, secret, and GitHub setup for apps with sign-in, saved data, file uploads, payments, email, AI features, scheduled tasks, webhooks, and publishing. Provisioning is one-click by default, can run automatically in test mode, and keeps live payment changes explicit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Polymai handle provider secrets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Polymai keeps private service keys out of public app files and places sensitive work behind server-side or provider-owned boundaries."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do users need to start with Polymai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Users need VS Code, an app idea, a coding agent, and access to any outside services the app requires. Polymai prepares the project first; the user then runs Codex, Claude Code, or another compatible coder against the prepared task files."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav-header>
+      <div class="nav-shell">
+        <a class="wordmark" href="#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="navMenu" aria-label="Primary navigation">
+          <a href="#workflow">How it works</a>
+          <a href="#gallery">Examples</a>
+          <a href="#control-plane">What you get</a>
+          <a href="pricing.html">Packages</a>
+          <a href="account.html">Account</a>
+          <button class="theme-options" id="themeOptions" type="button" aria-label="Style theme">
+            <span class="theme-option-icon theme-current-icon theme-option-icon-bright" aria-hidden="true"></span>
+            <span class="theme-current-label">Light</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-motion" aria-hidden="true">
+          <article class="motion-panel motion-panel-plan">
+            <div class="motion-card-head">
+              <strong>Plan</strong>
+              <span></span>
+            </div>
+            <ul>
+              <li><span class="motion-mini-icon motion-mini-doc"></span>Brief</li>
+              <li><span class="motion-mini-icon motion-mini-scope"></span>Scope</li>
+              <li><span class="motion-mini-icon motion-mini-grid"></span>Architecture</li>
+            </ul>
+          </article>
+          <article class="motion-panel motion-panel-build">
+            <div class="motion-card-head">
+              <strong>Build</strong>
+              <span></span>
+            </div>
+            <div class="motion-code-card">
+              <span class="motion-code-icon">&lt;/&gt;</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="motion-panel motion-panel-preview">
+            <div class="motion-card-head">
+              <strong>Preview</strong>
+              <span></span>
+            </div>
+            <div class="motion-preview-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="motion-panel motion-panel-check">
+            <div class="motion-card-head">
+              <strong>Check</strong>
+              <span></span>
+            </div>
+            <ul>
+              <li><span class="motion-check-dot"></span>Tests</li>
+              <li><span class="motion-check-dot"></span>Quality</li>
+              <li><span class="motion-check-dot"></span>Readiness</li>
+            </ul>
+          </article>
+        </div>
+        <div class="hero-copy" data-reveal>
+          <p class="hero-badge"><span aria-hidden="true"></span>App building, under control</p>
+          <h1>Turn your app idea into working software.</h1>
+          <p class="hero-kicker">One clear path from brief to a checked, maintainable app.</p>
+          <p class="hero-lede">Polymai plans the work. Codex, Claude Code, or another compatible coder writes the code. Polymai then connects services and checks every result.</p>
+          <ul class="hero-path" aria-label="Three steps from idea to app">
+            <li><span aria-hidden="true">1</span><strong>Describe the outcome</strong></li>
+            <li><span aria-hidden="true">2</span><strong>Review the build plan</strong></li>
+            <li><span aria-hidden="true">3</span><strong>Run your coder and verify</strong></li>
+          </ul>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#workflow">See how it works</a>
+            <a class="button button-secondary hero-cta" href="https://marketplace.visualstudio.com/items?itemName=Polymai.polymai" target="_blank" rel="noreferrer" aria-label="Get the Polymai VS Code extension (opens in a new tab)">
+              <span>Get the VS Code extension</span>
+              <span class="hero-cta-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-intro problem-section workflow-section" id="workflow">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">How it works</p>
+          <h2>You bring the idea. Polymai keeps the build on track.</h2>
+          <p>No technical specification is required. You can review every step before the code changes.</p>
+        </div>
+        <div class="value-grid workflow-grid info-card-grid" data-info-card-group>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <span class="value-index">01</span>
+            <h3>Describe the outcome</h3>
+            <p class="info-card-summary">Start with who the app is for, what people should do, and what success looks like.</p>
+            <div class="info-card-details" id="workflow-detail-describe" aria-hidden="true">
+              <div>
+                <p>Polymai turns that outcome into a stable brief covering the workflow, users, data, services, and constraints before any coding starts.</p>
+              </div>
+            </div>
+            <button class="info-card-toggle" type="button" aria-expanded="false" aria-controls="workflow-detail-describe">
+              <span data-info-card-label>Read more</span>
+              <span class="info-card-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <span class="value-index">02</span>
+            <h3>Review the plan</h3>
+            <p class="info-card-summary">See the pages, data, services, files, and checks before the build begins.</p>
+            <div class="info-card-details" id="workflow-detail-review" aria-hidden="true">
+              <div>
+                <p>The reviewed plan becomes the shared contract for Polymai and your coder, keeping the implementation focused and later changes easier to understand.</p>
+              </div>
+            </div>
+            <button class="info-card-toggle" type="button" aria-expanded="false" aria-controls="workflow-detail-review">
+              <span data-info-card-label>Read more</span>
+              <span class="info-card-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <span class="value-index">03</span>
+            <h3>Run your coder</h3>
+            <p class="info-card-summary">Run Codex, Claude Code, or another compatible coding agent against the prepared task.</p>
+            <div class="info-card-details" id="workflow-detail-build" aria-hidden="true">
+              <div>
+                <p>When the implementation is ready, return to Polymai to preview it, provision detected runtime changes, verify readiness, and prepare the next update.</p>
+              </div>
+            </div>
+            <button class="info-card-toggle" type="button" aria-expanded="false" aria-controls="workflow-detail-build">
+              <span data-info-card-label>Read more</span>
+              <span class="info-card-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery-section examples-feature-section" id="gallery">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div>
+            <p class="eyebrow">Examples</p>
+            <h2>See the kind of apps the workflow produces.</h2>
+          </div>
+          <a class="button button-secondary" href="examples.html">View all examples</a>
+        </div>
+
+        <div class="example-carousel" id="exampleCarousel" aria-roledescription="carousel" data-reveal>
+          <div class="example-carousel-stage" id="exampleCarouselStage" tabindex="0" aria-live="polite"></div>
+          <div class="example-carousel-bar">
+            <button class="carousel-control" id="examplePrev" type="button" aria-label="Previous example">Previous</button>
+            <div class="example-progress" aria-hidden="true"><span id="exampleCarouselProgress"></span></div>
+            <p class="section-note" id="exampleCarouselCount">Loading examples...</p>
+            <button class="carousel-control" id="exampleNext" type="button" aria-label="Next example">Next</button>
+          </div>
+          <p class="state-line" id="exampleCarouselStatus" role="status" aria-live="polite">Loading examples...</p>
+        </div>
+      </section>
+
+      <section class="section product-showcase" id="control-plane">
+        <div class="showcase-copy" data-reveal>
+          <p class="eyebrow">What you get</p>
+          <h2>A real app project, not a disposable code answer.</h2>
+          <p>Keep the code, data setup, provisioning, previews, and checks in one project you can inspect and improve.</p>
+        </div>
+        <figure class="showcase-frame" data-reveal>
+          <img src="assets/polymai-interface.svg" alt="Polymai settings menu showing app services and launch actions.">
+          <figcaption>The plan, app files, ongoing provisioning, preview, and checks stay together.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section provisioning-section" id="provisioning">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Ongoing provisioning</p>
+          <h2>App services keep up with every code change.</h2>
+          <p>After each coder run, Polymai finds what changed, updates the services the app needs, and shows anything still missing.</p>
+        </div>
+        <div class="value-grid provisioning-grid info-card-grid" data-info-card-group>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <span class="value-index">01</span>
+            <h3>Detect what changed</h3>
+            <p class="info-card-summary">Polymai reads the current project again after every build or update.</p>
+            <div class="info-card-details" id="provisioning-detail-detect" aria-hidden="true">
+              <div>
+                <p>It scans schema, policies, storage, Edge Functions, secrets, payment setup, and publishing artifacts instead of relying on an old checklist.</p>
+              </div>
+            </div>
+            <button class="info-card-toggle" type="button" aria-expanded="false" aria-controls="provisioning-detail-detect">
+              <span data-info-card-label>Read more</span>
+              <span class="info-card-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <span class="value-index">02</span>
+            <h3>Connect required services</h3>
+            <p class="info-card-summary">Update only the services the current app actually uses.</p>
+            <div class="info-card-details" id="provisioning-detail-apply" aria-hidden="true">
+              <div>
+                <p>This is ongoing provisioning: one controlled action updates the detected services. It is one-click by default and can run automatically in test mode.</p>
+              </div>
+            </div>
+            <button class="info-card-toggle" type="button" aria-expanded="false" aria-controls="provisioning-detail-apply">
+              <span data-info-card-label>Read more</span>
+              <span class="info-card-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <span class="value-index">03</span>
+            <h3>Check the result</h3>
+            <p class="info-card-summary">See immediately whether the app and its services are ready.</p>
+            <div class="info-card-details" id="provisioning-detail-verify" aria-hidden="true">
+              <div>
+                <p>Missing setup stays visible. If the code needs repair, Polymai prepares a focused task for your chosen coder and checks the next result.</p>
+              </div>
+            </div>
+            <button class="info-card-toggle" type="button" aria-expanded="false" aria-controls="provisioning-detail-verify">
+              <span data-info-card-label>Read more</span>
+              <span class="info-card-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </article>
+        </div>
+        <p class="provisioning-note" data-reveal><strong>Controlled by design:</strong> only services found in the current project are changed. Live payment changes always require confirmation.</p>
+      </section>
+
+      <section class="section method-section method-disclosure-section" id="method">
+        <article class="method-disclosure-card info-card" data-info-card data-reveal>
+          <div class="section-heading">
+            <p class="eyebrow">Detailed process</p>
+            <h2>See all six build steps.</h2>
+            <p class="info-card-summary">Open the full flow when you want the detail.</p>
+          </div>
+          <div class="info-card-details" aria-hidden="true">
+            <div>
+              <div class="build-flow-component" id="buildFlowComponent" aria-label="Interactive Polymai build flow">
+                <div class="build-flow-canvas" data-flow-canvas>
+                  <svg class="build-flow-svg" data-flow-svg viewBox="0 0 900 760" role="img" aria-labelledby="buildFlowTitle buildFlowDesc" focusable="false">
+                    <title id="buildFlowTitle">Polymai build flow</title>
+                    <desc id="buildFlowDesc">A six-step circular process showing how a user request becomes developer-readable app artifacts.</desc>
+                  </svg>
+                  <div class="build-flow-center" data-flow-center aria-live="polite"></div>
+                  <div class="build-flow-hotspots" data-flow-hotspots role="list" aria-label="Build flow steps"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section runtime-section" id="integrations">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div>
+            <p class="eyebrow">App services</p>
+            <h2>Use what the app needs — nothing extra.</h2>
+            <p>Connect data, sign-in, payments, email, AI, and publishing only when required.</p>
+          </div>
+          <a class="button button-secondary" href="developers.html">Developer details</a>
+        </div>
+        <ul class="workflow-chip-row" aria-label="Delivery workflow capabilities" data-reveal>
+          <li>Preview checks</li>
+          <li>Visual review</li>
+          <li>Admin panels</li>
+          <li>Scheduled jobs</li>
+          <li>Safe updates</li>
+          <li>GitHub publish</li>
+        </ul>
+        <div class="runtime-grid info-card-grid" data-info-card-group>
+          <article class="runtime-card info-card" data-info-card data-reveal>
+            <h3>Data and user accounts</h3>
+            <p class="info-card-summary">Database, sign-in, storage, and access rules.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Polymai keeps these pieces aligned when the app saves information or needs private user access.</p>
+              </div>
+            </div>
+          </article>
+          <article class="runtime-card info-card" data-info-card data-reveal>
+            <h3>Secure background work</h3>
+            <p class="info-card-summary">Email, AI, payments, webhooks, and scheduled tasks.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Sensitive work stays behind server-side functions instead of running in public browser code.</p>
+              </div>
+            </div>
+          </article>
+          <article class="runtime-card info-card" data-info-card data-reveal>
+            <h3>Private service keys</h3>
+            <p class="info-card-summary">Private credentials stay out of public files.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>The browser receives only safe settings; private provider keys remain in server or provider environments.</p>
+              </div>
+            </div>
+          </article>
+          <article class="runtime-card info-card" data-info-card data-reveal>
+            <h3>Preview and release checks</h3>
+            <p class="info-card-summary">See whether the app is ready for its next step.</p>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Provisioning status, browser previews, screenshots, and smoke checks expose missing or broken setup.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section answer-section" id="answers">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Answers</p>
+          <h2>Common questions, answered plainly.</h2>
+          <p>Open a question for the answer.</p>
+        </div>
+        <div class="value-grid info-card-grid" data-info-card-group>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <h3>What is Polymai?</h3>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>A VS Code extension that plans the build, hands the task to your chosen coder, then connects services and checks the result.</p>
+              </div>
+            </div>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <h3>How does it build?</h3>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Polymai prepares the task. Your chosen coder implements it. Polymai then provisions and verifies the result.</p>
+              </div>
+            </div>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <h3>What can it create?</h3>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>SaaS products, portals, dashboards, admin panels, internal tools, and service-connected prototypes.</p>
+              </div>
+            </div>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <h3>Which services can it connect?</h3>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Polymai can prepare sign-in, data, uploads, payments, email, AI, jobs, webhooks, and publishing.</p>
+              </div>
+            </div>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <h3>How are secrets handled?</h3>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>Private keys stay outside browser code. Sensitive work runs behind server-side or provider-owned boundaries.</p>
+              </div>
+            </div>
+          </article>
+          <article class="value-card info-card" data-info-card data-reveal>
+            <h3>What is needed to start?</h3>
+            <div class="info-card-details" aria-hidden="true">
+              <div>
+                <p>VS Code, an idea, and Codex, Claude Code, or another compatible coder.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section start-section" id="start">
+        <div class="start-panel" data-reveal>
+          <div>
+            <p class="eyebrow">Start</p>
+            <h2>Build your first app with the Free package.</h2>
+            <p>Sign in and start, or browse live examples first.</p>
+          </div>
+          <div class="start-actions" aria-label="Get started with Polymai">
+            <a class="button button-primary" href="login.html">Start free</a>
+            <a class="button button-secondary" href="examples.html">View examples</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="wordmark" href="#top" aria-label="Polymai home">
+          <span>Polymai</span>
+        </a>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="pricing.html">Packages</a>
+          <a href="account.html">Account</a>
+          <a href="legal.html">Legal</a>
+          <a href="developers.html">Developers</a>
+        </nav>
+        <p>Plan. Build with any coder. Provision and improve.</p>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="previewModal" hidden>
+      <section class="preview-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close preview">
+          <span aria-hidden="true">x</span>
+        </button>
+        <p class="eyebrow" id="modalIndustry"></p>
+        <h2 id="modalTitle">App preview</h2>
+        <p id="modalSummary"></p>
+        <dl class="modal-facts">
+          <div>
+            <dt>Build source</dt>
+            <dd id="modalFocus"></dd>
+          </div>
+          <div>
+            <dt>Best for</dt>
+            <dd id="modalAudience"></dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd id="modalStatus"></dd>
+          </div>
+        </dl>
+        <div class="preview-frame-shell" id="modalFrameShell" hidden>
+          <iframe id="modalFrame" title="App preview" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+        <div class="modal-actions">
+          <a class="button button-primary" id="modalLeadLink" href="login.html">Start free</a>
+          <a class="button button-secondary" id="modalOpenLink" href="#" target="_blank" rel="noreferrer">Open live app</a>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/galleryData.js"></script>
+    <script src="js/previewModal.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/buildFlow.js"></script>
+    <script src="js/infoCards.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
