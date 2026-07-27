@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T20:45:19.036Z",
+  "generatedAt": "2026-07-27T22:19:54.272Z",
   "source": "github:Polymai",
   "count": 43,
   "apps": [
@@ -13,8 +13,8 @@
       "description": "Encrypt files locally and keep them recoverable across a resilient browser-powered device mesh.",
       "status": "Live app",
       "impact": "Open live app",
-      "url": "https://polymai.github.io/the-mesh-vault/",
-      "previewUrl": "https://polymai.github.io/the-mesh-vault/",
+      "url": "https://themeshvault.com/",
+      "previewUrl": "https://themeshvault.com/",
       "screenStatus": "ok",
       "screenStatusCode": 200,
       "publishedAt": "2026-07-24T09:11:51Z",
