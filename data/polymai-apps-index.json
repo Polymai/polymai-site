@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T13:59:34.185Z",
+  "generatedAt": "2026-08-08T14:51:25.402Z",
   "source": "github:Polymai",
   "count": 43,
   "apps": [
@@ -429,12 +429,12 @@
       "industry": "Custom software",
       "summary": "Craftvoya is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Craftvoya is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/craftvoya/",
       "previewUrl": "https://polymai.github.io/craftvoya/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-05-10T23:53:51Z",
       "updatedAt": "2026-05-10T23:53:51Z",
       "repo": "Polymai/craftvoya",
