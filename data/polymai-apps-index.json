@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T10:29:59.743Z",
+  "generatedAt": "2026-08-13T12:02:05.180Z",
   "source": "github:Polymai",
   "count": 43,
   "apps": [
@@ -334,12 +334,12 @@
       "industry": "Custom software",
       "summary": "Bookbox Ai is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Bookbox Ai is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/bookbox-ai/",
       "previewUrl": "https://polymai.github.io/bookbox-ai/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-06-03T00:14:12Z",
       "updatedAt": "2026-06-03T00:14:12Z",
       "repo": "Polymai/bookbox-ai",
