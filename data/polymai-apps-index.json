@@ -1,8 +1,27 @@
 {
-  "generatedAt": "2026-08-18T15:48:35.254Z",
+  "generatedAt": "2026-08-19T20:47:28.829Z",
   "source": "github:Polymai",
-  "count": 43,
+  "count": 44,
   "apps": [
+    {
+      "id": "polymarket-edge-lab",
+      "title": "Polymarket Edge Lab",
+      "focus": "GitHub build",
+      "audience": "Polymai customers",
+      "industry": "Custom software",
+      "summary": "Polymarket Edge Lab reads live Polymarket markets and CLOB order books, scores spread, book imbalance, fill slippage and event overround, and keeps a two-sided YES/NO depth viewer with a personal watchlist and saved book snapshots.",
+      "description": "Polymarket Edge Lab reads live Polymarket markets and CLOB order books, scores spread, book imbalance, fill slippage and event overround, and keeps a two-sided YES/NO depth viewer with a personal watchlist and saved book snapshots.",
+      "status": "Live app",
+      "impact": "Open live app",
+      "url": "https://polymai.github.io/polymarket-edge-lab/",
+      "previewUrl": "https://polymai.github.io/polymarket-edge-lab/",
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
+      "publishedAt": "2026-08-19T20:32:20Z",
+      "updatedAt": "2026-08-19T20:32:20Z",
+      "repo": "Polymai/polymarket-edge-lab",
+      "manifest": ""
+    },
     {
       "id": "the-mesh-vault",
       "title": "The Mesh Vault",
