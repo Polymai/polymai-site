@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T11:38:26.425Z",
+  "generatedAt": "2026-08-23T13:03:56.098Z",
   "source": "github:Polymai",
   "count": 44,
   "apps": [
@@ -790,12 +790,12 @@
       "industry": "Custom software",
       "summary": "Polymai Marketplace is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Polymai Marketplace is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/Polymai-Marketplace/",
       "previewUrl": "https://polymai.github.io/Polymai-Marketplace/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-02-02T22:56:47Z",
       "updatedAt": "2026-02-02T22:56:47Z",
       "repo": "Polymai/Polymai-Marketplace",
