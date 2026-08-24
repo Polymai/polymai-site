@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T16:57:39.724Z",
+  "generatedAt": "2026-08-24T17:49:06.118Z",
   "source": "github:Polymai",
   "count": 44,
   "apps": [
@@ -239,12 +239,12 @@
       "industry": "Custom software",
       "summary": "Infinite Story is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Infinite Story is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/infinite-story/",
       "previewUrl": "https://polymai.github.io/infinite-story/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-06-15T07:14:52Z",
       "updatedAt": "2026-06-15T07:14:52Z",
       "repo": "Polymai/infinite-story",
