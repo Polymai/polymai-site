@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T18:46:03.830Z",
+  "generatedAt": "2026-09-02T21:52:09.150Z",
   "source": "github:Polymai",
   "count": 44,
   "apps": [
@@ -752,12 +752,12 @@
       "industry": "Custom software",
       "summary": "Bachelor Party is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Bachelor Party is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/bachelor-party/",
       "previewUrl": "https://polymai.github.io/bachelor-party/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-02-07T11:47:35Z",
       "updatedAt": "2026-02-07T11:47:35Z",
       "repo": "Polymai/bachelor-party",
