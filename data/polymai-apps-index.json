@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T21:52:09.150Z",
+  "generatedAt": "2026-09-03T05:51:47.878Z",
   "source": "github:Polymai",
   "count": 44,
   "apps": [
@@ -486,12 +486,12 @@
       "industry": "Custom software",
       "summary": "Nordhome Mobile First Map Driven is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Nordhome Mobile First Map Driven is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Live app",
-      "impact": "Open live app",
+      "status": "Needs check",
+      "impact": "Check publish",
       "url": "https://polymai.github.io/nordhome-mobile-first-map-driven/",
       "previewUrl": "https://polymai.github.io/nordhome-mobile-first-map-driven/",
-      "screenStatus": "ok",
-      "screenStatusCode": 200,
+      "screenStatus": "needs-check",
+      "screenStatusCode": 0,
       "publishedAt": "2026-05-07T23:28:50Z",
       "updatedAt": "2026-05-07T23:28:50Z",
       "repo": "Polymai/nordhome-mobile-first-map-driven",
