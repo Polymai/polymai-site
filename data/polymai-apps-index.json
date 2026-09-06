@@ -1,8 +1,27 @@
 {
-  "generatedAt": "2026-09-06T01:01:50.871Z",
+  "generatedAt": "2026-09-06T23:57:43.990Z",
   "source": "github:Polymai",
-  "count": 44,
+  "count": 45,
   "apps": [
+    {
+      "id": "riskklar",
+      "title": "Riskklar",
+      "focus": "GitHub build",
+      "audience": "Polymai customers",
+      "industry": "Custom software",
+      "summary": "Samla arbetsunderlag, granska risker och dokumentera bedömningar inför ställverksarbete. Riskklar samlar företagets projekt och riskanalyser.",
+      "description": "Samla arbetsunderlag, granska risker och dokumentera bedömningar inför ställverksarbete. Riskklar samlar företagets projekt och riskanalyser.",
+      "status": "Live app",
+      "impact": "Open live app",
+      "url": "https://polymai.github.io/riskklar/",
+      "previewUrl": "https://polymai.github.io/riskklar/",
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
+      "publishedAt": "2026-09-06T23:15:51Z",
+      "updatedAt": "2026-09-06T23:15:51Z",
+      "repo": "Polymai/riskklar",
+      "manifest": ""
+    },
     {
       "id": "polymarket-edge-lab",
       "title": "Polymarket Edge Lab",
