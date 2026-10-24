@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T01:38:51.563Z",
+  "generatedAt": "2026-10-24T07:21:24.321Z",
   "source": "github:Polymai",
   "count": 45,
   "apps": [
@@ -600,12 +600,12 @@
       "industry": "Custom software",
       "summary": "Inklet is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Inklet is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/Inklet/",
       "previewUrl": "https://polymai.github.io/Inklet/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-04-19T23:57:38Z",
       "updatedAt": "2026-04-19T23:57:38Z",
       "repo": "Polymai/Inklet",
