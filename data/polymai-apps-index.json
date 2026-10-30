@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T14:14:58.472Z",
+  "generatedAt": "2026-10-30T19:27:58.392Z",
   "source": "github:Polymai",
   "count": 45,
   "apps": [
@@ -410,12 +410,12 @@
       "industry": "Custom software",
       "summary": "Formaai is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
       "description": "Formaai is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Needs check",
-      "impact": "Check publish",
+      "status": "Live app",
+      "impact": "Open live app",
       "url": "https://polymai.github.io/formaai/",
       "previewUrl": "https://polymai.github.io/formaai/",
-      "screenStatus": "needs-check",
-      "screenStatusCode": 0,
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
       "publishedAt": "2026-05-26T23:55:38Z",
       "updatedAt": "2026-05-26T23:55:38Z",
       "repo": "Polymai/formaai",
