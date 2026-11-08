@@ -1,0 +1,540 @@
+/* Polymai for Microsoft 365 page: centred hero, scroll-animated product showcase,
+   steps, privacy band, screenshot gallery with lightbox, and help cards.
+   Reuses shared tokens, buttons, section headings and the requirements table. */
+
+.m365-hero {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 92px 0 34px;
+  text-align: center;
+}
+
+.m365-hero-copy {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+}
+
+.m365-hero h1 {
+  max-width: 13ch;
+  margin: 0;
+  font-size: clamp(2.6rem, 6.2vw, 5.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.m365-hero-copy > p:not(.eyebrow) {
+  max-width: 34ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.08rem, 1.6vw, 1.32rem);
+  line-height: 1.5;
+}
+
+.m365-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.m365-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.m365-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Product showcase on a subtle grid */
+.m365-showcase {
+  position: relative;
+  padding: 28px 0 96px;
+  overflow-x: clip;
+}
+
+/* The grid lives on its own faded layer so the product stays fully opaque. */
+.m365-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center top;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 78%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 78%, transparent);
+  pointer-events: none;
+}
+
+.m365-stage {
+  position: relative;
+  z-index: 1;
+  width: min(1000px, calc(100vw - 40px));
+  margin: 0 auto;
+  perspective: 1600px;
+}
+
+.m365-window {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 40px 90px rgba(17, 20, 18, 0.18), 0 6px 18px rgba(17, 20, 18, 0.08);
+  cursor: zoom-in;
+  transform-origin: 50% 0;
+}
+
+.m365-window-bar {
+  display: flex;
+  gap: 7px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+.m365-window-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.m365-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.m365-float {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  row-gap: 2px;
+  align-items: center;
+  min-width: 220px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 22px 50px rgba(17, 20, 18, 0.16);
+}
+
+.m365-float strong {
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+.m365-float small {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.m365-float-dot {
+  grid-row: span 2;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-soft);
+}
+
+.m365-float-a {
+  top: 14%;
+  left: -64px;
+}
+
+.m365-float-b {
+  top: 46%;
+  right: -72px;
+}
+
+.m365-float-c {
+  bottom: -30px;
+  left: 12%;
+}
+
+/* Steps */
+.m365-steps-section {
+  padding-top: 24px;
+}
+
+.m365-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.m365-steps li {
+  display: grid;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 2px solid var(--ink);
+}
+
+.m365-steps span {
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.m365-steps strong {
+  color: var(--ink);
+  font-size: 1.35rem;
+}
+
+.m365-steps p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* Privacy band */
+.m365-privacy-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.m365-privacy-band > div {
+  display: grid;
+  gap: 8px;
+  padding: 26px 26px 28px;
+  background: var(--accent-soft);
+}
+
+.m365-privacy-band strong {
+  color: var(--accent-strong);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.m365-privacy-band span {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.m365-note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.m365-note a,
+.m365-help-support a {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+/* Gallery */
+.m365-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.m365-shot {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+}
+
+.m365-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1270 / 555;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.m365-shot figcaption {
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+[data-lightbox]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Details for IT and security: four columns of the shared answer cards */
+.m365-details-section .value-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.m365-details-section .section-heading a {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+/* Help */
+.m365-help {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.m365-help-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--surface);
+}
+
+.m365-help-card h2 {
+  margin: 4px 0 14px;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.m365-help-card ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--ink-soft);
+}
+
+.m365-help-card p {
+  margin: 0 0 8px;
+  color: var(--ink-soft);
+}
+
+.m365-help-support {
+  background: var(--accent-soft);
+}
+
+.m365-help-support p:first-of-type:not(.eyebrow) {
+  font-size: 1.3rem;
+}
+
+.m365-trademark {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Lightbox */
+.m365-lightbox {
+  width: min(1280px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.4);
+}
+
+.m365-lightbox::backdrop {
+  background: rgba(10, 14, 12, 0.74);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.m365-lightbox img {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  object-fit: contain;
+  background: var(--surface-strong);
+}
+
+.m365-lightbox p {
+  margin: 0;
+  padding: 12px 18px;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.m365-lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.m365-lightbox-close:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+body.m365-lightbox-open {
+  overflow: hidden;
+}
+
+/* Scroll-driven motion where supported; static elsewhere. */
+@media (prefers-reduced-motion: no-preference) {
+  .m365-shot {
+    transition: transform 260ms ease, box-shadow 260ms ease;
+  }
+
+  .m365-shot:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 60px rgba(17, 20, 18, 0.16);
+  }
+
+  @supports (animation-timeline: view()) {
+    .m365-window {
+      animation: m365-window-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 42%;
+    }
+
+    .m365-float {
+      animation: m365-float-in linear both;
+      animation-timeline: view();
+    }
+
+    .m365-float-a {
+      --m365-from: -60px, 30px;
+      animation-range: entry 30% cover 38%;
+    }
+
+    .m365-float-b {
+      --m365-from: 60px, 20px;
+      animation-range: entry 45% cover 46%;
+    }
+
+    .m365-float-c {
+      --m365-from: 0, 60px;
+      animation-range: entry 60% cover 54%;
+    }
+
+    .m365-steps li,
+    .m365-privacy-band > div {
+      animation: m365-fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 30%;
+    }
+  }
+}
+
+@keyframes m365-window-rise {
+  from {
+    opacity: 0.85;
+    transform: translateY(48px) scale(0.9) rotateX(14deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes m365-float-in {
+  from {
+    opacity: 0;
+    transform: translate(var(--m365-from)) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes m365-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 1180px) {
+  .m365-details-section .value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .m365-float-a {
+    left: -16px;
+  }
+
+  .m365-float-b {
+    right: -16px;
+  }
+}
+
+@media (max-width: 940px) {
+  .m365-hero {
+    padding-top: 64px;
+  }
+
+  .m365-showcase {
+    padding-bottom: 48px;
+  }
+
+  .m365-stage {
+    display: grid;
+    gap: 10px;
+  }
+
+  .m365-float {
+    position: static;
+    min-width: 0;
+  }
+
+  .m365-details-section .value-grid,
+  .m365-steps,
+  .m365-privacy-band,
+  .m365-gallery,
+  .m365-help {
+    grid-template-columns: 1fr;
+  }
+}
