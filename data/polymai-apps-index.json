@@ -1,27 +1,8 @@
 {
-  "generatedAt": "2026-11-09T06:41:44.972Z",
+  "generatedAt": "2026-11-09T10:37:45.747Z",
   "source": "github:Polymai",
-  "count": 46,
+  "count": 45,
   "apps": [
-    {
-      "id": "consid-demo",
-      "title": "Consid Demo",
-      "focus": "GitHub build",
-      "audience": "Polymai customers",
-      "industry": "Custom software",
-      "summary": "Consid Demo is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "description": "Consid Demo is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
-      "status": "Live app",
-      "impact": "Open live app",
-      "url": "https://polymai.github.io/consid-demo/",
-      "previewUrl": "https://polymai.github.io/consid-demo/",
-      "screenStatus": "ok",
-      "screenStatusCode": 200,
-      "publishedAt": "2026-11-05T07:34:43Z",
-      "updatedAt": "2026-11-05T07:34:43Z",
-      "repo": "Polymai/consid-demo",
-      "manifest": ""
-    },
     {
       "id": "riskklar",
       "title": "Riskklar",
