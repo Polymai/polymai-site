@@ -1,8 +1,27 @@
 {
-  "generatedAt": "2026-11-27T22:00:53.789Z",
+  "generatedAt": "2026-11-28T03:56:37.901Z",
   "source": "github:Polymai",
-  "count": 45,
+  "count": 46,
   "apps": [
+    {
+      "id": "lokanalys",
+      "title": "Lokanalys",
+      "focus": "GitHub build",
+      "audience": "Polymai customers",
+      "industry": "Custom software",
+      "summary": "Lokanalys is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
+      "description": "Lokanalys is a live Polymai app preview with an embeddable product surface and a full-screen example to inspect.",
+      "status": "Live app",
+      "impact": "Open live app",
+      "url": "https://lokanalys.se/",
+      "previewUrl": "https://lokanalys.se/",
+      "screenStatus": "ok",
+      "screenStatusCode": 200,
+      "publishedAt": "2026-11-27T23:47:32Z",
+      "updatedAt": "2026-11-27T23:47:32Z",
+      "repo": "Polymai/lokanalys",
+      "manifest": ""
+    },
     {
       "id": "riskklar",
       "title": "Riskklar",
